@@ -4,10 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-
     <title>SkyCast</title>
 </head>
-<body>
+<body class="bg-[url('/images/bg.jpg')] backdrop-brightness-90 bg-no-repeat bg-center bg-cover min-h-screen">
+    <div class="md:flex justify-between">
+        <header class="pt-3 md:ml-14 md:mt-8 xl:mt-4 text-center">
+            <h1 class="font-extrabold text-xl md:text-3xl xl:text-4xl italic text-white">SKYCAST</h1>
+            <p class="text-xs md:text-base xl:text-lg italic text-slate-50 md:mt-1">Your daily guide to the skies.</p>
+        </header>
+        <section>
+            <div class="my-5 mx-4 md:mr-12 md:mt-6 xl:mr-32 xl:mt-8 xl:flex">
+                <div class="text-center">
+                    <input type="text" name="search" id="search" placeholder="E.g., New York, New Delhi" class="rounded-lg border-none px-2 py-1 w-full md:h-8 md:w-48 xl:h-10 xl:w-64 text-cyan-900 font-semibold focus:bg-cyan-100 focus:outline-none focus:ring-1 focus:ring-cyan-900">
+                    <button type="submit" class="rounded-lg border-none px-2 py-1 mt-2 w-full md:h-8 md:w-20 xl:h-10 xl:w-20 text-white font-bold text-base bg-blue-800 hover:bg-blue-900 tracking-wide md:ml-2">Search</button>
+                </div>
+                <div class="horizontal-line mx-auto my-4 h-0.5 w-44 border-t-0 bg-slate-200 xl:hidden"></div>
+                <div class="vertical-line hidden xl:block xl:my-auto xl:ml-3 xl:mr-3 xl:h-7 xl:w-0.5 xl:border-t-0 xl:bg-slate-200" ></div>
+                <div class="text-center">
+                    <button type="button" class="rounded-lg border-none w-full md:w-72 py-1 xl:mt-2 md:h-8 xl:h-10 xl:w-40 text-white font-bold text-base bg-orange-400 hover:bg-orange-500 tracking-wide">Current Location</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="flex flex-col-reverse xl:flex-row my-9 xl:my-32">
+        <!-- 5 Days Forecast div-->
+        <div class="border-none rounded-md bg-white bg-opacity-40 backdrop-blur-md xl:mx-7 mx-4 md:mx-10 py-5 px-3 xl:px-3 xl:basis-1/3 shadow-md shadow-slate-200/55">
+          <h2 class="text-lg md:text-2xl font-extrabold text-teal-950 md:tracking-wider md:mb-5 text-center">5 Days Forecast</h2>
+          <div class="md:space-y-1 md:ml-5 xl:space-y-6">
+              <div class="grid grid-cols-4 items-center text-teal-950 font-semibold text-sm md:text-xl">
+                <p class="text-xl md:text-3xl xl:pl-2">🌤️</p>
+                <p>27°C</p>
+                <p>11 Sept</p>
+                <p>Monday</p>
+              </div>
+              <div class="grid grid-cols-4 items-center text-teal-950 font-semibold text-sm md:text-xl">
+                <p class="text-xl md:text-3xl xl:pl-2">🌦️</p>
+                <p>25°C</p>
+                <p>12 Sept</p>
+                <p>Tuesday</p>
+              </div>
+              <div class="grid grid-cols-4 items-center text-teal-950 font-semibold text-sm md:text-xl">
+                <p class="text-xl md:text-3xl xl:pl-2">☀️</p>
+                <p>29°C</p>
+                <p>13 Sept</p>
+                <p>Wednesday</p>
+              </div>
+              <div class="grid grid-cols-4 items-center text-teal-950 font-semibold text-sm md:text-xl">
+                <p class="text-xl md:text-3xl xl:pl-2">⛅</p>
+                <p>26°C</p>
+                <p>14 Sept</p>
+                <p>Thursday</p>
+              </div>
+              <div class="grid grid-cols-4 items-center text-teal-950 font-semibold text-sm md:text-xl">
+                <p class="text-xl md:text-3xl xl:pl-2">🌧️</p>
+                <p>24°C</p>
+                <p>15 Sept</p>
+                <p>Friday</p>
+              </div>
+          </div>
+        </div>
+      
+        <!-- Current Weather div -->
+        <div class="border-none rounded-md bg-white bg-opacity-40 backdrop-blur-md  mx-10 mb-12 xl:mb-0 xl:mr-4 py-5 sm:py-2 px-4 xl:basis-2/3 shadow-md shadow-slate-200/55">
+            <div class="flex flex-col md:flex-row  justify-between items-center">
+                <div class="text-center md:text-left">
+                  <h2 class="text-3xl md:text-4xl font-extrabold text-teal-950 tracking-wide">London</h2>
+                  <p class="text-4xl md:text-6xl font-bold text-orange-600 my-3">30.45 °C</p>
+                  <p class="text-lg md:text-xl font-bold text-teal-950 tracking-wide mb-2">Raining</p>
+                  <p class="text-sm md:text-lg font-normal text-slate-700">Sunday, 10, Sept, 2024</p>
+                </div>
+                <div class="my-3 md:my-0">
+                  <p class="text-6xl md:text-8xl">🌧️</p> <!-- Icon Placeholder -->
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5 mt-4">
+                <div class="border-none rounded-md bg-sky-400 bg-opacity-55 p-2 shadow-sky-500 shadow-md">
+                  <p class="font-bold text-sm text-teal-950">Humidity</p>
+                  <div class="flex items-center mt-3 justify-between">
+                    <p class="text-xl">💧</p>
+                    <p class="font-bold text-xl text-teal-950">70%</p>
+                  </div>
+                </div>
+                <div class="border-none rounded-md bg-sky-400 bg-opacity-55 p-2 shadow-sky-500 shadow-md">
+                  <p class="font-bold text-sm text-teal-950">Pressure</p>
+                  <div class="flex items-center mt-3 justify-between">
+                    <p class="text-xl">🧭</p>
+                    <p class="font-bold text-xl text-teal-950">1007 hPa</p>
+                  </div>
+                </div>
+                <div class="border-none rounded-md bg-sky-400 bg-opacity-55 p-2 shadow-sky-500 shadow-md">
+                  <p class="font-bold text-sm text-teal-950">Visibility</p>
+                  <div class="flex items-center mt-3 justify-between">
+                    <p class="text-xl">👁️</p>
+                    <p class="font-bold text-xl text-teal-950">3.5 Km</p>
+                  </div>
+                </div>
+                <div class="border-none rounded-md bg-sky-400 bg-opacity-55 p-2 shadow-sky-500 shadow-md">
+                  <p class="font-bold text-sm text-teal-950">Feels Like</p>
+                  <div class="flex items-center mt-3 justify-between">
+                    <p class="text-xl">🌡️</p>
+                    <p class="font-bold text-xl text-teal-950">37.75 °C</p>
+                  </div>
+                </div>
+                <div class="border-none rounded-md bg-sky-400 bg-opacity-55 p-2 shadow-sky-500 shadow-md">
+                  <p class="font-bold text-sm text-teal-950">Wind Speed</p>
+                  <div class="flex items-center mt-3 justify-between">
+                    <p class="text-xl">💨</p>
+                    <p class="font-bold text-xl text-teal-950">15 km/h</p>
+                  </div>
+                </div>
+              </div>
     
+        </div>
+      </section>
+      
 </body>
 </html>
