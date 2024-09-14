@@ -1330,6 +1330,10 @@ video {
   background-image: url('/images/bg.jpg');
 }
 
+.bg-\[url\(\'\.\/images\/bg\.jpg\'\)\] {
+  background-image: url('./images/bg.jpg');
+}
+
 .bg-auto {
   background-size: auto;
 }
