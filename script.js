@@ -176,7 +176,7 @@ myLoctionBtn.addEventListener("click", () => {
 // Function to get city name by latitude and longitude
 async function weatherByLocation(lat, lon) {
     try{
-        let url = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${myAPI}`;
+        let url = `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${myAPI}`;
         let locationData = await fetch(url).then(response => response.json());
         let city = locationData[0].name; // Getting the city name
             // console.log(city);
