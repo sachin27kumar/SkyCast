@@ -177,8 +177,12 @@ myLoctionBtn.addEventListener("click", () => {
 async function weatherByLocation(lat, lon) {
     try{
         let url = `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${myAPI}`;
-        let locationData = await fetch(url).then(response => response.json());
-        let city = locationData[0].name; // Getting the city name
+        let response = await fetch(url);
+        let text = await response.text();
+        console.log(text);  // Log the full response to see if it's HTML or JSON
+
+        let locationData = JSON.parse(text); // Parse only if it's JSON
+        let city = locationData[0].name;
             // console.log(city);
             savedHistory(city);
     
